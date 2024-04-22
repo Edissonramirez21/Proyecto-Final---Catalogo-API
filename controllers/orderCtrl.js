@@ -89,8 +89,8 @@ export const createOrderCtrl = asyncHandler(async (req, res) => {
       orderId: JSON.stringify(order?._id),
     },
     mode: "payment",
-    success_url: "${process.env.BASE_URL}/success",
-    cancel_url: "${process.env.BASE_URL}/cancel/cancel",
+    success_url: `https://catalogovirtual.netlify.app/thanks`,
+    cancel_url: `https://catalogovirtual.netlify.app/cancel`,
   });
   res.send({ url: session.url });
 });
